@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 1980-01-01
+
+- :warning: require C++ >= 14
+- setup nix packaging & CI
+- setup mergify
+- Only add GCC Clang warnings options in GCC/Clang
+- update for jrl-cmakemodules v1
+
 ## [1.2.9] - 2024-08-26
 
 - allow use of installed jrl-cmakemodules
@@ -18,25 +26,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2.7] - 2023-11-15
 
-Changes since v1.2.6:
 - Respect BUILD_SHARED_LIBS
 - Update CMake
 
 ## [1.2.6] - 2023-03-31
 
-Changes in v1.2.6:
 - Adding inline keyword on (deprecated) solve_eiquadprog2 implemented in header
 - Ignore Wsign-conversion warnings
 
 ## [1.2.5] - 2022-09-12
 
-Changes in v1.2.5:
 - fix trace solver
 
 
 ## [1.2.4] - 2022-09-05
 
-Changes in v1.2.4:
 - tests are now optional
 - Remove memory allocations and expose dual variables to the user
 - fix warning about cast of unused parameters
@@ -51,44 +55,36 @@ Maintenance release
 
 ## [1.2.2] - 2020-09-21
 
-Changes in v1.2.2:
 - Update package.xml for ROS release
 
 ## [1.2.1] - 2020-09-09
 
-Changes in v1.2.1:
 - add TRACE_SOLVER option
 - fix packaging
 
 ## [1.2.0] - 2020-05-26
 
-Changes in v1.2.0:
 - add a shared library
 
 ## [1.1.3] - 2020-03-24
 
-Changes since v1.1.2:
 - CMake: export project and use exports from dependencies
 - CMake: keep minimal required instructions
 
 ## [1.1.2] - 2020-03-11
 
-Changes since v1.1.1:
 - fix build on 16.04, where Eigen3Config.cmake doesn't provide a version
 
 ## [1.1.1] - 2020-03-11
 
-Changes since v1.1.0:
 - update README
 
 ## [1.1.0] - 2020-03-11
 
-Changes since v1.0.0:
 - Added CMake Export
 
 ## [1.0.0] - 2019-10-24
 
-Changes since v0.0.3:
 - Add eiquadprog-rt
 - Fix license
 - Configure CI
@@ -99,7 +95,8 @@ Changes since v0.0.3:
 
 Initial Release
 
-[Unreleased]: https://github.com/stack-of-tasks/eiquadprog/compare/v1.2.9...HEAD
+[Unreleased]: https://github.com/stack-of-tasks/eiquadprog/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/stack-of-tasks/eiquadprog/compare/v1.2.9...v1.3.0
 [1.2.9]: https://github.com/stack-of-tasks/eiquadprog/compare/v1.2.8...v1.2.9
 [1.2.8]: https://github.com/stack-of-tasks/eiquadprog/v1.2.7...v1.2.8
 [1.2.7]: https://github.com/stack-of-tasks/eiquadprog/v1.2.6...v1.2.7
