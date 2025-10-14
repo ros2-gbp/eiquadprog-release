@@ -18,7 +18,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '1'
-    release_repo_url: https://github.com/stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: eloquent
     vcs_type: git
@@ -43,7 +43,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '1'
-    release_repo_url: https://github.com/stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: foxy
     vcs_type: git
@@ -70,7 +70,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '2'
-    release_repo_url: git@github.com:stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: humble
     vcs_type: git
@@ -97,7 +97,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '2'
-    release_repo_url: git@github.com:stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: iron
     vcs_type: git
@@ -124,7 +124,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '1'
-    release_repo_url: git@github.com:stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: jazzy
     vcs_type: git
@@ -178,7 +178,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '1'
-    release_repo_url: https://github.com/stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: melodic
     vcs_type: git
@@ -205,7 +205,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '1'
-    release_repo_url: git@github.com:stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: noetic
     vcs_type: git
@@ -232,7 +232,7 @@ tracks:
     name: eiquadprog
     patches: null
     release_inc: '1'
-    release_repo_url: git@github.com:stack-of-tasks/eiquadprog-ros-release.git
+    release_repo_url: https://github.com/ros2-gbp/eiquadprog-release.git
     release_tag: v:{version}
     ros_distro: rolling
     vcs_type: git
