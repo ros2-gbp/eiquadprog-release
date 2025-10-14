@@ -17,7 +17,7 @@
 # with eiquadprog.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.22)
 
 # Project properties
 set(PROJECT_ORG stack-of-tasks)
@@ -47,14 +47,6 @@ else()
       TARGET jrl-cmakemodules::jrl-cmakemodules
       PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
     message(STATUS "JRL cmakemodules found on system at ${JRL_CMAKE_MODULES}")
-  elseif(${CMAKE_VERSION} VERSION_LESS "3.14.0")
-    message(
-      FATAL_ERROR
-        "\nCan't find jrl-cmakemodules. Please either:\n"
-        "  - use git submodule: 'git submodule update --init'\n"
-        "  - or install https://github.com/jrl-umi3218/jrl-cmakemodules\n"
-        "  - or upgrade your CMake version to >= 3.14 to allow automatic fetching\n"
-    )
   else()
     message(STATUS "JRL cmakemodules not found. Let's fetch it.")
     include(FetchContent)
@@ -73,6 +65,7 @@ include("${JRL_CMAKE_MODULES}/boost.cmake")
 # Project definition
 compute_project_args(PROJECT_ARGS LANGUAGES CXX)
 project(${PROJECT_NAME} ${PROJECT_ARGS})
+check_minimal_cxx_standard(14 ENFORCE)
 
 # Project dependencies
 add_project_dependency(Eigen3 REQUIRED)
@@ -89,8 +82,11 @@ set(${PROJECT_NAME}_HEADERS
     include/${PROJECT_NAME}/eiquadprog-utils.hxx)
 
 add_library(${PROJECT_NAME} src/eiquadprog-fast.cpp src/eiquadprog.cpp)
-target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-sign-conversion"
-)# We have a lot of implicit size_t to Eigen::Index conversions
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  # We have a lot of implicit size_t to Eigen::Index conversions
+  target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-sign-conversion")
+endif()
 
 if(TRACE_SOLVER)
   target_compile_definitions(${PROJECT_NAME} PRIVATE EIQGUADPROG_TRACE_SOLVER)
