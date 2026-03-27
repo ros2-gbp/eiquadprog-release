@@ -1,3 +1,26 @@
+## eiquadprog (humble) - 1.3.1-1
+
+The packages in the `eiquadprog` repository were released into the `humble` distro by running `/nix/store/rhf364g29a4h0nwdhf8lv17y9jh0i5gj-python3.13-bloom-0.13.0/bin/bloom-release -r humble eiquadprog` on `Fri, 27 Mar 2026 14:14:42 -0000`
+
+The `eiquadprog` package was released.
+
+Version of package(s) in repository `eiquadprog`:
+
+- upstream repository: git@github.com:stack-of-tasks/eiquadprog.git
+- release repository: https://github.com/ros2-gbp/eiquadprog-release.git
+- rosdistro version: `1.3.0-1`
+- old version: `1.3.0-1`
+- new version: `1.3.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## eiquadprog (jazzy) - 1.3.1-1
 
 The packages in the `eiquadprog` repository were released into the `jazzy` distro by running `/nix/store/rhf364g29a4h0nwdhf8lv17y9jh0i5gj-python3.13-bloom-0.13.0/bin/bloom-release -r jazzy eiquadprog` on `Fri, 27 Mar 2026 14:12:58 -0000`
